@@ -1,0 +1,20 @@
+# Ejecutable de Terraform (no se sube al repositorio)
+terraform.exe
+terraform
+
+# Directorio que crea Terraform al hacer init (librerías del proveedor AWS)
+.terraform/
+
+# Archivo de estado de Terraform (contiene info sensible de la infraestructura)
+terraform.tfstate
+terraform.tfstate.backup
+
+# Archivo de plan binario
+*.tfplan
+
+# Variables con valores sensibles como credenciales o contraseñas
+*.tfvars.json
+
+# Archivos de bloqueo del sistema operativo
+.DS_Store
+Thumbs.db

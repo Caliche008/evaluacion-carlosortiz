@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examen Terraform - Carlos Ortiz</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 20px;
+        padding: 50px 60px;
+        max-width: 600px;
+        width: 90%;
+        text-align: center;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+      }
+      .logo {
+        font-size: 48px;
+        margin-bottom: 10px;
+      }
+      h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #e2e8f0;
+      }
+      .subtitle {
+        font-size: 1.1rem;
+        color: #94a3b8;
+        margin-bottom: 35px;
+      }
+      .info-block {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        padding: 20px 25px;
+        margin: 12px 0;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        text-align: left;
+      }
+      .info-block .icon {
+        font-size: 1.6rem;
+      }
+      .info-block .label {
+        font-size: 0.78rem;
+        color: #64748b;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 3px;
+      }
+      .info-block .value {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #e2e8f0;
+      }
+      .badge {
+        display: inline-block;
+        background: linear-gradient(90deg, #6366f1, #8b5cf6);
+        color: white;
+        font-size: 0.8rem;
+        font-weight: 600;
+        padding: 6px 18px;
+        border-radius: 20px;
+        margin-top: 30px;
+        letter-spacing: 0.5px;
+      }
+      .footer {
+        margin-top: 30px;
+        font-size: 0.75rem;
+        color: #475569;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="logo">☁️</div>
+      <h1>Bienvenido al Examen Terraform</h1>
+      <p class="subtitle">Despliegue de IaC en AWS con Terraform — Módulo 3</p>
+
+      <div class="info-block">
+        <span class="icon">👨‍💻</span>
+        <div>
+          <div class="label">Nombre del Estudiante</div>
+          <div class="value">Carlos Ortiz</div>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <span class="icon">📅</span>
+        <div>
+          <div class="label">Fecha de Despliegue</div>
+          <div class="value" id="fecha"></div>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <span class="icon">🪣</span>
+        <div>
+          <div class="label">Servicio AWS</div>
+          <div class="value">Amazon S3 — Static Website Hosting</div>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <span class="icon">🏢</span>
+        <div>
+          <div class="label">Empresa</div>
+          <div class="value">CloudNova S.A.S</div>
+        </div>
+      </div>
+
+      <span class="badge">✅ Proyecto: Betek — Environment: dev</span>
+      <div class="footer">Infraestructura desplegada con Terraform v1.5+</div>
+    </div>
+
+    <script>
+      // Muestra la fecha actual en formato legible en español
+      const opciones = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      };
+      const fecha = new Date().toLocaleDateString("es-CO", opciones);
+      document.getElementById("fecha").textContent = fecha;
+    </script>
+  </body>
+</html>
